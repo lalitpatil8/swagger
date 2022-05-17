@@ -24,3 +24,43 @@
     height: auto;
     max-height: 9999px;
 }
+.bg-green{
+    background-color: rgba(73,204,144,.1);
+}
+.bg-dark-green{
+    background-color: #49cc90;
+    border: 1px solid #49cc90;
+}
+.border-green{
+    border: 1px solid #49cc90;
+}
+.bg-sky{
+    background-color: rgba(97,175,254,.1);
+}
+.bg-dark-sky{
+    background-color: #61affe;
+    border: 1px solid #61affe;
+}
+.border-sky{
+    border: 1px solid #61affe;
+}
+.bg-orange{
+    background-color: rgba(252,161,48,.1);
+}
+.bg-dark-orange{
+    background-color: #fca130;
+    border: 1px solid #fca130
+}
+.border-orange{
+    border: 1px solid #fca130;
+}
+.bg-red{
+    background-color: rgba(249,62,62,.1);
+}
+.bg-dark-red{
+    background-color: #f93e3e;
+    border: 1px solid #f93e3e;
+}
+.border-red{
+    border: 1px solid #f93e3e;
+}
