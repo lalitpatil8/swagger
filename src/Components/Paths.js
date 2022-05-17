@@ -25,23 +25,23 @@ export default function Paths(props) {
     setFlag(!flag);
   };
 
-  const setMethodColor = (method, border, bg) => {
+  const setMethodColor = (method, border, bg, dark) => {
     if (border && bg) {
       return method === GLOBALCONSTANT.POST
-        ? "bg-green-" + bg + " border-green-" + border
+        ? dark?"bg-dark-green":"bg-green"
         : method === GLOBALCONSTANT.PUT
-        ? "bg-orange-" + bg + " border-orange-" + border
+        ? dark?"bg-dark-orange":"bg-orange"
         : method === GLOBALCONSTANT.GET
-        ? "bg-sky-" + bg + " border-sky-" + border
-        : "bg-red-" + bg + " border-red-" + border;
+        ? dark?"bg-dark-sky":"bg-sky"
+        : dark?"bg-dark-red":"bg-red"
     }
     return method === GLOBALCONSTANT.POST
-      ? "border-green-" + border
+      ? "border-green"
       : method === GLOBALCONSTANT.PUT
-      ? "border-orange-" + border
+      ? "border-orange"
       : method === GLOBALCONSTANT.GET
-      ? "border-sky-" + border
-      : "border-red-" + border;
+      ? "border-sky"
+      : "border-red"
   };
 
   const changeResponse = (event) => {
@@ -57,16 +57,18 @@ export default function Paths(props) {
             <div
               className={`${setMethodColor(
                 method[GLOBALCONSTANT.METHOD0],
-                "300",
-                undefined
+                true,
+                false,
+                false
               )} border my-2 rounded-lg`}
               key={i}
             >
               <div
                 className={`${setMethodColor(
                   method[GLOBALCONSTANT.METHOD0],
-                  "300",
-                  "200"
+                   true,
+                  true,
+                  false
                 )} flex p-2 text-black rounded-t-lg
                 `}
                 onClick={() => pathToggle(i)}
@@ -75,8 +77,9 @@ export default function Paths(props) {
                   <span
                     className={`${setMethodColor(
                       method[GLOBALCONSTANT.METHOD0],
-                      "500",
-                      "400"
+                      true,
+                      true,
+                      true
                     )} border font-bold text-white py-1 px-4 rounded-sm uppercase`}
                   >
                     {method[GLOBALCONSTANT.METHOD0] !== null
@@ -94,13 +97,15 @@ export default function Paths(props) {
                   pathSelected === i
                     ? `${setMethodColor(
                         method[GLOBALCONSTANT.METHOD0],
-                        "300",
-                        "200"
+                        true,
+                        true,
+                        false
                       )} content show rounded-b-lg`
                     : `${setMethodColor(
                         method[GLOBALCONSTANT.METHOD0],
-                        "300",
-                        "200"
+                        true,
+                        true,
+                        false
                       )} content hide rounded-b-lg`
                 }
               >
